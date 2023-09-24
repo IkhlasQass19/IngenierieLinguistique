@@ -51,6 +51,6 @@ def get_IO_data():
     return X, E
 X, E = get_IO_data()
 delta0 = np.random.rand() 
-n_iter = 100
+n_iter = 1000
 poids = perceptron(X, E, delta0 , n_iter)
 print("Poids finaux : ", poids)
