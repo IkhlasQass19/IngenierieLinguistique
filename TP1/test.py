@@ -12,13 +12,13 @@ def get_IO_data(file_path):
     np.random.shuffle(data_array)
 
     # Extraction de la colonne "_À" et stockage dans une liste
-    _A_column = data_array[:, df.columns.get_loc("_À")]
+    _A_column = data_array[:, df.columns.get_loc("X1")]
     _A_list = _A_column.tolist()
 
     return data_array, _A_list
 
 # Chemin vers votre fichier CSV
-file_path = 'votre_fichier.csv'
+file_path = 'Donnees_Numeriques.csv'
 
 # Appel de la fonction pour obtenir les données
 data_array, _A_list = get_IO_data(file_path)
