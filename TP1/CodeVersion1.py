@@ -36,9 +36,11 @@ def descente_gradient(w,gradient,i,delta0) :
 def perceptron(X, E, delta0, n_iter) :
     k = len(X[0]) 
     print (k)
+    #ui
     w = initialisation(k)
-    
+    #100
     for i in range(n_iter):
+        print("=============================\npour itiration :",i+1)
         gradient = gradient_Globale(X, E, w)
         #print("gradient globale est :",gradient)
         w= descente_gradient(w,gradient,i,delta0) 
@@ -51,6 +53,6 @@ def get_IO_data():
     return X, E
 X, E = get_IO_data()
 delta0 = np.random.rand() 
-n_iter = 1000
+n_iter = 190
 poids = perceptron(X, E, delta0 , n_iter)
 print("Poids finaux : ", poids)
